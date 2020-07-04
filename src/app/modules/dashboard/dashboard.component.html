@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<div>
+  <app-widget-area></app-widget-area>
+</div>
+<br>
+
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-card">
+  <mat-card fxFlex="25">
+    <app-widget-card label="New Users" total="10k" percentage="20"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="User Engagement" total="18k" percentage="50"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="User Retention" total="16k" percentage="70"></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card label="User Referrals" total="8k" percentage="10"></app-widget-card>
+  </mat-card>
+</div>
+<br>
+
+<mat-divider></mat-divider>
+<br>
+
+<div>
+  <div>Table</div>
+  <div>Pie Chart</div>
+</div>
