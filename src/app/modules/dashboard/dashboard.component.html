@@ -1,5 +1,5 @@
 <div>
-  <app-widget-area></app-widget-area>
+  <app-widget-area [data]="bigChart"></app-widget-area>
 </div>
 <br>
 
@@ -8,16 +8,16 @@
 
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-card">
   <mat-card fxFlex="25">
-    <app-widget-card label="New Users" total="10k" percentage="20"></app-widget-card>
+    <app-widget-card label="New Users" total="10k" percentage="20" [data]="cards"></app-widget-card>
   </mat-card>
   <mat-card fxFlex="25">
-    <app-widget-card label="User Engagement" total="18k" percentage="50"></app-widget-card>
+    <app-widget-card label="User Engagement" total="18k" percentage="50" [data]="cards"></app-widget-card>
   </mat-card>
   <mat-card fxFlex="25">
-    <app-widget-card label="User Retention" total="16k" percentage="70"></app-widget-card>
+    <app-widget-card label="User Retention" total="16k" percentage="70" [data]="cards"></app-widget-card>
   </mat-card>
   <mat-card fxFlex="25">
-    <app-widget-card label="User Referrals" total="8k" percentage="10"></app-widget-card>
+    <app-widget-card label="User Referrals" total="8k" percentage="10" [data]="cards"></app-widget-card>
   </mat-card>
 </div>
 <br>
@@ -25,7 +25,12 @@
 <mat-divider></mat-divider>
 <br>
 
-<div>
-  <div>Table</div>
-  <div>Pie Chart</div>
+<div fxLayoutGap="25px" fxLayout="row" fxLayoutAlign="space-between center">
+  <div fxFlex="60">Table</div>
+  <div fxFlex="40">
+    <app-widget-pie [data] = "pieChart"></app-widget-pie>
+  </div>
 </div>
+<br>
+<mat-divider></mat-divider>
+<br>
